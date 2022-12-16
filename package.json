@@ -54,6 +54,6 @@
         "chai": "*",
         "mocha": "*",
         "restify": "^4.3.0",
-        "service-processstates-node": "../service-processstates-node"
+        "service-processstates-node": "https://github.com/pip-services-integration2/service-processstates-node.git"
     }
 }
