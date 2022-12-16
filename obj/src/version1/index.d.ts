@@ -1,5 +1,5 @@
 export { ProcessStatesDirectClientV1 } from "./ProcessStatesDirectClientV1";
-export { ProcessStatesHttpClientV1 } from "./ProcessStatesHttpClientV1";
+export { ProcessStatesCommandableHttpClientV1 as ProcessStatesHttpClientV1 } from "./ProcessStatesCommandableHttpClientV1";
 export { ProcessStatesMemoryClientV1 } from "./ProcessStatesMemoryClientV1";
 export { ProcessStatesNullClientV1 } from "./ProcessStatesNullClientV1";
 export { IProcessStatesClient } from "./IProcessStatesClient";

@@ -4,16 +4,16 @@ import { References } from 'pip-services3-commons-nodex';
 
 import { ProcessStatesMemoryPersistence } from 'service-processstates-node';
 import { ProcessStatesController } from 'service-processstates-node';
-import { ProcessStatesHttpServiceV1 } from 'service-processstates-node';
+import { ProcessStatesCommandableHttpServiceV1 } from 'service-processstates-node';
 
-import { ProcessStatesHttpClientV1 } from '../../src/version1/ProcessStatesHttpClientV1';
+import { ProcessStatesCommandableHttpClientV1 } from '../../src/version1/ProcessStatesCommandableHttpClientV1';
 import { ProcessStatesClientV1Fixture } from './ProcessStatesClientV1Fixture';
 
-suite('ProcessStatesHttpClientV1', async () => {2
+suite('ProcessStatesCommandableHttpClientV1', async () => {2
     let persistence: ProcessStatesMemoryPersistence;
     let controller: ProcessStatesController;
-    let service: ProcessStatesHttpServiceV1;
-    let client: ProcessStatesHttpClientV1;
+    let service: ProcessStatesCommandableHttpServiceV1;
+    let client: ProcessStatesCommandableHttpClientV1;
     let fixture: ProcessStatesClientV1Fixture;
 
     setup(async () => {
@@ -29,17 +29,17 @@ suite('ProcessStatesHttpClientV1', async () => {2
             'connection.host', 'localhost'
         );
 
-        service = new ProcessStatesHttpServiceV1();
+        service = new ProcessStatesCommandableHttpServiceV1();
         service.configure(httpConfig);
 
-        client = new ProcessStatesHttpClientV1();
+        client = new ProcessStatesCommandableHttpClientV1();
         client.configure(httpConfig);
 
         let references = References.fromTuples(
             new Descriptor('service-processstates', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('service-processstates', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-processstates', 'service', 'http', 'default', '1.0'), service,
-            new Descriptor('service-processstates', 'client', 'http', 'default', '1.0'), client
+            new Descriptor('service-processstates', 'service', 'commandable-http', 'default', '1.0'), service,
+            new Descriptor('service-processstates', 'client', 'commandable-http', 'default', '1.0'), client
         );
         controller.setReferences(references);
         service.setReferences(references);

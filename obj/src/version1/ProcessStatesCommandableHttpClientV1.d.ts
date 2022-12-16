@@ -3,7 +3,7 @@ import { IProcessStatesClient } from "./IProcessStatesClient";
 import { FilterParams, PagingParams, DataPage } from "pip-services3-commons-nodex";
 import { MessageV1 } from "./MessageV1";
 import { ProcessStateV1 } from "./ProcessStateV1";
-export declare class ProcessStatesHttpClientV1 extends CommandableHttpClient implements IProcessStatesClient {
+export declare class ProcessStatesCommandableHttpClientV1 extends CommandableHttpClient implements IProcessStatesClient {
     constructor();
     getProcesses(correlationId: string, filter: FilterParams, paging: PagingParams): Promise<DataPage<ProcessStateV1>>;
     getProcessById(correlationId: string, processId: string): Promise<ProcessStateV1>;
