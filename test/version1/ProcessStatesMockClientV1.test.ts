@@ -1,14 +1,14 @@
-import { ProcessStatesMemoryClientV1 } from '../../src/version1/ProcessStatesMemoryClientV1';
-import { ProcessStatesMemoryClientV1Fixture } from './ProcessStatesMemoryClientV1Fixture';
+import { ProcessStatesMockClientV1 } from '../../src/version1/ProcessStatesMockClientV1';
+import { ProcessStatesMockClientV1Fixture } from './ProcessStatesMockClientV1Fixture';
 
 
-suite('ProcessStatesMemoryClientV1', () => {
-    let client: ProcessStatesMemoryClientV1;
-    let fixture: ProcessStatesMemoryClientV1Fixture;
+suite('ProcessStatesMockClientV1', () => {
+    let client: ProcessStatesMockClientV1;
+    let fixture: ProcessStatesMockClientV1Fixture;
 
     setup(async () => {
-        client = new ProcessStatesMemoryClientV1();
-        fixture = new ProcessStatesMemoryClientV1Fixture(client);
+        client = new ProcessStatesMockClientV1();
+        fixture = new ProcessStatesMockClientV1Fixture(client);
     });
 
     test('CRUD Operations', async () => {

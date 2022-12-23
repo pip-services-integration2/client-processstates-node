@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessStateV1Schema = exports.ProcessStateV1 = exports.ProcessStatusV1 = exports.TaskStateV1Schema = exports.TaskStateV1 = exports.TaskStatusV1 = exports.MessageV1Schema = exports.MessageV1 = exports.ProcessNotFoundExceptionV1 = exports.ProcessLockedExceptionV1 = exports.ProcessInvalidStateExceptionV1 = exports.ProcessStoppedExceptionV1 = exports.ProcessAlreadyExistExceptionV1 = exports.ProcessExceptionV1 = exports.ProcessStatesNullClientV1 = exports.ProcessStatesMemoryClientV1 = exports.ProcessStatesHttpClientV1 = exports.ProcessStatesDirectClientV1 = void 0;
+exports.ProcessStateV1Schema = exports.ProcessStateV1 = exports.ProcessStatusV1 = exports.TaskStateV1Schema = exports.TaskStateV1 = exports.TaskStatusV1 = exports.MessageV1Schema = exports.MessageV1 = exports.ProcessNotFoundExceptionV1 = exports.ProcessLockedExceptionV1 = exports.ProcessInvalidStateExceptionV1 = exports.ProcessStoppedExceptionV1 = exports.ProcessAlreadyExistExceptionV1 = exports.ProcessExceptionV1 = exports.ProcessStatesNullClientV1 = exports.ProcessStatesMockClientV1 = exports.ProcessStatesCommandableHttpClientV1 = exports.ProcessStatesDirectClientV1 = void 0;
 var ProcessStatesDirectClientV1_1 = require("./ProcessStatesDirectClientV1");
 Object.defineProperty(exports, "ProcessStatesDirectClientV1", { enumerable: true, get: function () { return ProcessStatesDirectClientV1_1.ProcessStatesDirectClientV1; } });
 var ProcessStatesCommandableHttpClientV1_1 = require("./ProcessStatesCommandableHttpClientV1");
-Object.defineProperty(exports, "ProcessStatesHttpClientV1", { enumerable: true, get: function () { return ProcessStatesCommandableHttpClientV1_1.ProcessStatesCommandableHttpClientV1; } });
-var ProcessStatesMemoryClientV1_1 = require("./ProcessStatesMemoryClientV1");
-Object.defineProperty(exports, "ProcessStatesMemoryClientV1", { enumerable: true, get: function () { return ProcessStatesMemoryClientV1_1.ProcessStatesMemoryClientV1; } });
+Object.defineProperty(exports, "ProcessStatesCommandableHttpClientV1", { enumerable: true, get: function () { return ProcessStatesCommandableHttpClientV1_1.ProcessStatesCommandableHttpClientV1; } });
+var ProcessStatesMockClientV1_1 = require("./ProcessStatesMockClientV1");
+Object.defineProperty(exports, "ProcessStatesMockClientV1", { enumerable: true, get: function () { return ProcessStatesMockClientV1_1.ProcessStatesMockClientV1; } });
 var ProcessStatesNullClientV1_1 = require("./ProcessStatesNullClientV1");
 Object.defineProperty(exports, "ProcessStatesNullClientV1", { enumerable: true, get: function () { return ProcessStatesNullClientV1_1.ProcessStatesNullClientV1; } });
 var ProcessExceptionV1_1 = require("./ProcessExceptionV1");

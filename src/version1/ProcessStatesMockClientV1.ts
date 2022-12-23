@@ -1,6 +1,5 @@
 
 import { ApplicationException, BadRequestException, DataPage, FilterParams, IdGenerator, PagingParams } from "pip-services3-commons-nodex";
-import { IdentifiableMemoryPersistence } from 'pip-services3-data-nodex';
 import { IProcessStatesClient } from "./IProcessStatesClient";
 import { MessageV1 } from "./MessageV1";
 import { ProcessStateV1 } from "./ProcessStateV1";
@@ -12,7 +11,7 @@ import { ProcessAlreadyExistExceptionV1 } from "./ProcessAlreadyExistExceptionV1
 import { ProcessNotFoundExceptionV1 } from "./ProcessNotFoundExceptionV1";
 import { RecoveryManager } from "./RecoveryManager";
 
-export class ProcessStatesMemoryClientV1 implements IProcessStatesClient {
+export class ProcessStatesMockClientV1 implements IProcessStatesClient {
     private _maxPageSize: number = 100;
     private _items: ProcessStateV1[] = [];
 

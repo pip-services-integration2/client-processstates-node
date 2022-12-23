@@ -3,9 +3,8 @@ const assert = require('chai').assert;
 import { FilterParams } from 'pip-services3-commons-nodex';
 import { PagingParams } from 'pip-services3-commons-nodex';
 
-import { IProcessStatesClient } from '../../src/version1/IProcessStatesClient';
-import { IProcessStatesPersistence, MessageV1, ProcessStatusV1, ProcessStateV1, TaskStateV1, TaskStatusV1 } from 'service-processstates-node';
-import { ProcessStatesMemoryClientV1 } from '../../src/version1/ProcessStatesMemoryClientV1';
+import { MessageV1, ProcessStatusV1, ProcessStateV1, TaskStateV1, TaskStatusV1 } from 'service-processstates-node';
+import { ProcessStatesMockClientV1 } from '../../src/version1/ProcessStatesMockClientV1';
 
 
 let MESSAGE1: MessageV1 = {
@@ -33,10 +32,10 @@ let MESSAGE3: MessageV1 = {
 }
 
 
-export class ProcessStatesMemoryClientV1Fixture {
-    private _client: ProcessStatesMemoryClientV1;
+export class ProcessStatesMockClientV1Fixture {
+    private _client: ProcessStatesMockClientV1;
 
-    constructor(client: ProcessStatesMemoryClientV1) {
+    constructor(client: ProcessStatesMockClientV1) {
         assert.isNotNull(client);
         this._client = client;
     }
